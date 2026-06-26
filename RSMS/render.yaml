@@ -1,0 +1,16 @@
+# Render deployment config for RSMS
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: rsms
+    runtime: node
+    plan: free
+    # The app lives in the RSMS/ subfolder of the repository
+    rootDir: RSMS
+    buildCommand: npm install && npm run seed
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.20.2
+      - key: JWT_SECRET
+        generateValue: true

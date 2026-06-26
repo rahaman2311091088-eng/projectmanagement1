@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Database (regenerated via npm run seed)
+server/db/rsms.db
+server/db/rsms.db-shm
+server/db/rsms.db-wal
+
+# Uploads
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs & OS
+*.log
+.DS_Store
+
+# Screenshots / scratch (dev only)
+
+shot.js
+shot2.js
+debug.js
+run-shots.sh
+run-shots2.sh
+
+# Env
+.env
